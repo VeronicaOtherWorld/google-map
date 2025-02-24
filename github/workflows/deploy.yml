@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main # 只有 main 分支的提交才会触发这个工作流
-
+  workflow_dispatch: # 允许手动触发
 jobs:
   deploy:
     runs-on: ubuntu-latest
