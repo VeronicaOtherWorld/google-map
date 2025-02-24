@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 只有 main 分支的提交才会触发这个工作流
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # 拉取代码
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14" # 设置 Node.js 的版本
+
+      - name: Install dependencies
+        run: npm install # 安装项目依赖
+
+      - name: Build the project
+        run: npm run build # 构建项目
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # 使用 GitHub Pages 部署工具
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 token
+          publish_dir: ./build # 指定发布目录，通常是 build 或 dist 目录
+          env:
+            REACT_APP_GOOGLE_API_KEY: ${{ secrets.REACT_APP_GOOGLE_API_KEY }} # 引用你在 secrets 中存储的环境变量

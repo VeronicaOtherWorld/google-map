@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyCUCmqXsJ_v1Kw5o0J9l7ldoediZql5ooo"
+      googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}
       onLoad={() => setIsLoaded(true)} // ✅ 设置加载状态为 true
       libraries={libraries}
       onError={(e) => console.error("Google Maps API 加载失败:", e)}
