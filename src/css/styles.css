@@ -3,7 +3,7 @@
   padding: 10px 24px; /* 控制按钮的内边距 */
   background-color: #b2c5e4; /* Google蓝色 */
   color: white; /* 文字颜色 */
-  font-size: 16px; /* 字体大小 */
+  font-size: 15px; /* 字体大小 */
   border-radius: 8px; /* 圆角 */
   cursor: pointer; /* 鼠标变成手型 */
   font-weight: bold; /* 字体加粗 */
