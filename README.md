@@ -1,8 +1,17 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Google Map Routing Tool
 
-Currently, two official plugins are available:
+This project is a simple tool for calculating and displaying the optimal route between multiple locations using Google Maps API. It allows users to input multiple addresses, and it automatically calculates the most efficient driving route between them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+• Input multiple addresses (start, waypoints, and destination).
+• Automatically calculates the optimal route using Google Maps Directions API.
+• Displays the calculated route on a Google Map using DirectionsRenderer.
+• Supports adding waypoints between the start and destination.
+
+How to Use
+• Open the app in your browser.
+• Enter your start address, waypoint addresses, and destination address into the input field.
+• Click “Clean the address” to reset the addresses.
+• The map will automatically update with the most optimal route based on the provided addresses.
