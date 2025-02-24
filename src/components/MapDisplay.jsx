@@ -28,7 +28,6 @@ const MapDisplay = ({ addresses }) => {
   }, [addresses]);
 
   return (
-    // <LoadScript googleMapsApiKey="AIzaSyCUCmqXsJ_v1Kw5o0J9l7ldoediZql5ooo">
     <GoogleMap
       mapContainerStyle={{ width: "600px", height: "600px" }}
       center={center}
